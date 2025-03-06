@@ -3,6 +3,89 @@ html { box-sizing: border-box; }
 
 :root {
   /* zde vytvoř svoje css proměnné */
+  --font-title: "Poppins", sans-serif;
+  --font-other: "Open Sans", sans-serif;
+  --pismo-nadpis-head: 4rem;
+  --pismo-podnadpisem: 1.4rem;
+  --pismo-tlaciko: 1.4rem;
+  --pismo-nadpis-clanku: 1.6rem
+  --meta-info: 1rem;
+  --text-regular: 1.125rem;
+  --color-primary: #f24e7b;
+  --color-secundary: #931394;
+  --color-text: #70666c;
+  --spacing: 48rem;
+  --rohy: 12px;
 
+}
+
+body {
+  text-align: left;
+  font-family: var(--font-other);
+}
+.header {
+  background: url(images/header-bg.jpg) no-repeat center/cover ;
+  margin: 0 auto; 
+  padding: 50px;
+  margin: 0 10%;
+  color: white;
+  
+}
+
+h1, h2 {
+  font-family: var(--font-title);
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.content a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.content h2 {
+  font-size: var(--pismo-nadpis-clanku);
+}
+
+.header_description {
+  /*display: inline-block;*/
+  background-color: var(--color-primary);
+  border: 1px solid white;
+  font-size: var(--pismo-podnadpisem);
+  
+  
+}
+
+.header__title {
+  font-size: var(--pismo-nadpis-head);
+}
+
+.container {
+  width: var(--spacing);
+  margin: 0 auto;
+}
+
+.article__avatar {
+  border-radius: 50%;
+}
+
+.article__image {
+  border-radius: var(--rohy);
+  float: right;  
+}
+
+.button {
+  display: block;
+  background-image: linear-gradient(to right top, var(--color-primary), var(--color-secundary));
+  padding: 1rem 1.5rem 1rem 1rem;
+  margin: 1rem 0 1rem 0;
+  width: 15rem;
+  text-align: center;
+  border-radius: var(--rohy);
+  border: 1px solid white;
+  font-size: var(--pismo-tlaciko);
 }
 
