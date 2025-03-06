@@ -1,0 +1,8 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit;}
+
+:root {
+  /* zde vytvoř svoje css proměnné */
+
+}
+
