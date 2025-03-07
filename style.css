@@ -8,7 +8,7 @@ html { box-sizing: border-box; }
   --pismo-nadpis-head: 4rem;
   --pismo-podnadpisem: 1.4rem;
   --pismo-tlaciko: 1.4rem;
-  --pismo-nadpis-clanku: 1.6rem
+  --pismo-nadpis-clanku: 1.6rem;
   --meta-info: 1rem;
   --text-regular: 1.125rem;
   --color-primary: #f24e7b;
@@ -16,33 +16,51 @@ html { box-sizing: border-box; }
   --color-text: #70666c;
   --spacing: 48rem;
   --rohy: 12px;
+  --rohy-tl: 30px;
 
+}
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   text-align: left;
   font-family: var(--font-other);
+  line-height: 1.6;
 }
+
 .header {
   background: url(images/header-bg.jpg) no-repeat center/cover ;
-  margin: 0 auto; 
+  margin: 0; 
   padding: 50px;
-  margin: 0 10%;
   color: white;
-  
+  }
+
+  .header a {
+    text-decoration: none;
+    color: white;
+  }
+
+.header__description {
+  /*display: inline-block;*/
+  color: rgb(163, 163, 163);
+  font-size: var(--pismo-podnadpisem);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.header__title {
+  font-size: var(--pismo-nadpis-head);
 }
 
 h1, h2 {
   font-family: var(--font-title);
 }
-
-.header a {
-  text-decoration: none;
-  color: white;
+.content {
+  color: var(--color-text);
 }
-
 .content a {
-  text-decoration: none;
   color: var(--color-primary);
 }
 
@@ -50,31 +68,42 @@ h1, h2 {
   font-size: var(--pismo-nadpis-clanku);
 }
 
-.header_description {
-  /*display: inline-block;*/
-  background-color: var(--color-primary);
-  border: 1px solid white;
-  font-size: var(--pismo-podnadpisem);
-  
-  
-}
-
-.header__title {
-  font-size: var(--pismo-nadpis-head);
-}
-
 .container {
   width: var(--spacing);
   margin: 0 auto;
 }
 
+.article {
+  margin: 3.5em 0;
+}
+
+.article__title {
+  margin: 1em 0;
+}
+
+.article__perex {
+  margin: 0 0 1em 0;
+}
+
+.article__meta {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  overflow: hidden;
+  font-size: var(--meta-info);
+}
+
 .article__avatar {
   border-radius: 50%;
+  float: left;  
+  margin-right: 1rem;
 }
+
 
 .article__image {
   border-radius: var(--rohy);
-  float: right;  
+  float: right;
+  margin: 0 0 0 1rem;
 }
 
 .button {
@@ -84,8 +113,16 @@ h1, h2 {
   margin: 1rem 0 1rem 0;
   width: 15rem;
   text-align: center;
-  border-radius: var(--rohy);
-  border: 1px solid white;
+  border-radius: var(--rohy-tl);
+  border: 2px solid white;
   font-size: var(--pismo-tlaciko);
+}
+
+.button:hover {
+  background-image: linear-gradient(to left bottom, var(--color-primary), var(--color-secundary));
+}
+
+.button:active {
+  background-image: linear-gradient(to left bottom, var(--color-primary), var(--color-secundary));
 }
 
